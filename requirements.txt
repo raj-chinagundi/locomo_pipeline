@@ -1,0 +1,25 @@
+# MEMAGENT Requirements
+# Install with: pip install -r requirements.txt
+
+# Core LangChain
+langchain>=1.0.0
+langchain-community>=0.4
+
+# Embeddings and Vector Search
+sentence-transformers>=2.0.0
+faiss-cpu>=1.7.0
+
+# Retrievers
+rank-bm25>=0.2.2
+scikit-learn>=1.7.2
+
+# LLM (Optional - for advanced retrievers)
+langchain-google-genai>=2.0.5
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+
+# Optional: Advanced retrievers (uncomment if needed)
+# langchain-classic>=0.1.0
+

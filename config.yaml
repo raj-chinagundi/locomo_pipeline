@@ -1,0 +1,114 @@
+# ============================================================================
+# MEMAGENT Configuration
+# Configuration for retriever experiments on Locomo dataset
+# ============================================================================
+
+# Dataset Configuration
+# ----------------------------------------------------------------------------
+data:
+  # Path to Locomo JSON file
+  json_path: "locomo10.json"
+  
+  # Sample IDs to process (Options: "all", or list of specific IDs)
+  # Examples:
+  #   - "all": Process all conversations
+  #   - ["conv-26"]: Process only conversation 26
+  #   - ["conv-26", "conv-27", "conv-28"]: Process specific conversations
+  sample_ids: "all"
+  
+  # Limit number of conversations to process (null = no limit)
+  # Useful for quick testing on a subset
+  limit: 2
+
+
+# Retriever Configuration
+# ----------------------------------------------------------------------------
+retrievers:
+  # Which retrievers to test (Options: "all", or list of specific retrievers)
+  # Examples:
+  #   - "all": Run all available retrievers
+  #   - ["bm25", "faiss"]: Run only BM25 and FAISS
+  #   - ["ensemble", "mmr"]: Run hybrid and diversity-aware retrievers
+  #
+  # Available retrievers:
+  #   Basic: bm25, tfidf, faiss, svm
+  #   Advanced: ensemble, mmr, time_weighted
+  #   LLM-based: multiquery, contextual_compression, self_query, multivector
+  #   Specialized: parent_document, long_context_reorder
+  # Run ALL non-LLM retrievers (no API key needed)
+  to_run: ["bm25", "tfidf", "faiss", "ensemble", "svm", "mmr", "time_weighted", "long_context_reorder"]
+  # to_run: "all"  # Uncomment to run all retrievers (requires LLM)
+  
+  # Number of documents to retrieve per query
+  top_k: 5
+  
+  # Embedding model for vector-based retrievers
+  embedding_model: "sentence-transformers/all-mpnet-base-v2"
+  
+  # Ensemble retriever weights [vector_weight, keyword_weight]
+  ensemble_weights: [0.75, 0.25]
+  
+  # MultiQuery: number of query variations
+  multiquery_variations: 3
+  
+  # Parent Document: chunk size for child documents
+  parent_chunk_size: 400
+  parent_chunk_overlap: 50
+  
+  # MMR: diversity parameter (0=all relevance, 1=all diversity)
+  mmr_diversity: 0.5
+  mmr_fetch_k: 20
+
+
+# Evaluation Configuration
+# ----------------------------------------------------------------------------
+evaluation:
+  # Limit number of questions to test per conversation (null = all questions)
+  # Useful for quick testing
+  question_limit: 5
+  
+  # Filter results to same conversation as question
+  # (Recommended: true for fair comparison)
+  filter_by_conversation: true
+
+
+# LLM Configuration
+# ----------------------------------------------------------------------------
+llm:
+  # Enable LLM for advanced retrievers (requires GOOGLE_API_KEY in .env)
+  enabled: true # Set to true when you have API key
+  
+  # Generate natural language answers using RAG (Retrieval-Augmented Generation)
+  generate_answers: true # Set to true to generate answers from retrieved docs
+  
+  # Maximum number of retrieved documents to use as context for answer generation
+  max_context_docs: 5
+  
+  # LLM temperature (0.0 = deterministic, 1.0 = creative)
+  temperature: 0.0
+  
+  # Model name
+  model: "gemini-2.5-flash-lite"
+  
+  # Rate limiting to prevent API errors
+  rate_limit:
+    enabled: true              # Enable rate limiting
+    max_requests: 10           # Maximum requests allowed (stay under Gemini's 15/min limit)
+    time_window: 60            # Time window in seconds (60 = 1 minute)
+
+
+# Output Configuration
+# ----------------------------------------------------------------------------
+output:
+  # Directory to save results
+  results_dir: "./results"
+  
+  # Save detailed results (per-question breakdown)
+  save_detailed: true
+  
+  # Save summary statistics
+  save_summary: true
+  
+  # Timestamp format for result files (Options: "datetime", "unix")
+  timestamp_format: "datetime"  # e.g., 20251018_143022
+
