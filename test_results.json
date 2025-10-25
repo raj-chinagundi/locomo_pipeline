@@ -1,0 +1,3373 @@
+[
+  {
+    "convid": 1,
+    "qcount": 37,
+    "retrievers": [
+      {
+        "name": "tfidf",
+        "total_answer_right": 19,
+        "accuracy": 0.5135135135135135,
+        "q_lvl": [
+          {
+            "qid": 1,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ support group?",
+            "source_answer": "7 May 2023",
+            "source_evidence_ids": [
+              "D1:3"
+            ],
+            "generated_answer": "Caroline went to the LGBTQ support group on May 7, 2023.",
+            "retrieved_evidence_ids": [
+              "D1:3",
+              "D13:7",
+              "D1:7",
+              "D10:5",
+              "D1:18"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 2,
+            "category": 2,
+            "source_q": "When did Melanie paint a sunrise?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D1:12"
+            ],
+            "generated_answer": "Melanie painted the lake sunrise last year.",
+            "retrieved_evidence_ids": [
+              "D1:14",
+              "D14:3",
+              "D10:15",
+              "D13:10",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 3,
+            "category": 2,
+            "source_q": "When did Melanie run a charity race?",
+            "source_answer": "The sunday before 25 May 2023",
+            "source_evidence_ids": [
+              "D2:1"
+            ],
+            "generated_answer": "Melanie ran a charity race last Saturday.",
+            "retrieved_evidence_ids": [
+              "D2:2",
+              "D2:1",
+              "D14:3",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 4,
+            "category": 2,
+            "source_q": "When is Melanie planning on going camping?",
+            "source_answer": "June 2023",
+            "source_evidence_ids": [
+              "D2:7"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:1",
+              "D4:18",
+              "D14:32",
+              "D10:13",
+              "D6:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 5,
+            "category": 2,
+            "source_q": "When did Caroline give a speech at a school?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D10:15",
+              "D8:28",
+              "D15:13",
+              "D3:11",
+              "D14:28"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 6,
+            "category": 2,
+            "source_q": "When did Caroline meet up with her friends, family, and mentors?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:11"
+            ],
+            "generated_answer": "Last week, as mentioned in the message from [7:55 pm on 9 June, 2023].",
+            "retrieved_evidence_ids": [
+              "D3:11",
+              "D3:22",
+              "D4:10",
+              "D16:5",
+              "D15:4"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 7,
+            "category": 2,
+            "source_q": "How long has Caroline had her current group of friends for?",
+            "source_answer": "4 years",
+            "source_evidence_ids": [
+              "D3:13"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D3:12",
+              "D10:20",
+              "D1:7",
+              "D8:27",
+              "D6:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 8,
+            "category": 2,
+            "source_q": "How long ago was Caroline's 18th birthday?",
+            "source_answer": "10 years ago",
+            "source_evidence_ids": [
+              "D4:5"
+            ],
+            "generated_answer": "Ten years ago.",
+            "retrieved_evidence_ids": [
+              "D4:5",
+              "D16:6",
+              "D3:15",
+              "D11:1",
+              "D8:27"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 9,
+            "category": 2,
+            "source_q": "When did Melanie sign up for a pottery class?",
+            "source_answer": "2 July 2023",
+            "source_evidence_ids": [
+              "D5:4"
+            ],
+            "generated_answer": "Melanie signed up for a pottery class on July 3, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:4",
+              "D16:17",
+              "D5:4",
+              "D16:18",
+              "D14:3"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 10,
+            "category": 2,
+            "source_q": "When is Caroline going to the transgender conference?",
+            "source_answer": "July 2023",
+            "source_evidence_ids": [
+              "D5:13"
+            ],
+            "generated_answer": "Caroline is going to a transgender conference this month.",
+            "retrieved_evidence_ids": [
+              "D5:13",
+              "D1:5",
+              "D12:11",
+              "D14:12",
+              "D3:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 11,
+            "category": 2,
+            "source_q": "When did Melanie go to the museum?",
+            "source_answer": "5 July 2023",
+            "source_evidence_ids": [
+              "D6:4"
+            ],
+            "generated_answer": "Melanie went to the museum on July 2, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D6:4",
+              "D5:3",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 12,
+            "category": 2,
+            "source_q": "When did Caroline have a picnic?",
+            "source_answer": "The week before 6 July 2023",
+            "source_evidence_ids": [
+              "D6:11"
+            ],
+            "generated_answer": "Caroline had a picnic last week, which was the week of July 3rd, 2023.",
+            "retrieved_evidence_ids": [
+              "D6:11",
+              "D12:10",
+              "D10:15",
+              "D15:13",
+              "D5:14"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 13,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ conference?",
+            "source_answer": "10 July 2023",
+            "source_evidence_ids": [
+              "D7:1"
+            ],
+            "generated_answer": "Caroline is going to a transgender conference this month.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D5:13",
+              "D1:18",
+              "D8:22",
+              "D5:3"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 14,
+            "category": 2,
+            "source_q": "When did Melanie read the book \"nothing is impossible\"?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D7:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D7:8",
+              "D10:15",
+              "D17:10",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 15,
+            "category": 2,
+            "source_q": "When did Caroline go to the adoption meeting?",
+            "source_answer": "The friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:9"
+            ],
+            "generated_answer": "July 15, 2023",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D2:13",
+              "D8:9",
+              "D1:18",
+              "D13:1"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 16,
+            "category": 2,
+            "source_q": "When did Melanie go to the pottery workshop?",
+            "source_answer": "The Friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:2"
+            ],
+            "generated_answer": "Last Friday, July 14, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:2",
+              "D14:3",
+              "D12:3",
+              "D5:5"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 17,
+            "category": 2,
+            "source_q": "When did Melanie go camping in June?",
+            "source_answer": "The week before 27 June 2023",
+            "source_evidence_ids": [
+              "D4:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D13:7",
+              "D14:3",
+              "D10:13",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 18,
+            "category": 2,
+            "source_q": "When did Caroline go to a pride parade during the summer?",
+            "source_answer": "The week before 3 July 2023",
+            "source_evidence_ids": [
+              "D5:1"
+            ],
+            "generated_answer": "Caroline went to a pride parade a few weeks before July 15, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:17",
+              "D8:29",
+              "D2:7",
+              "D18:14"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 19,
+            "category": 2,
+            "source_q": "When did Melanie go camping in July?",
+            "source_answer": "two weekends before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D13:7",
+              "D14:3",
+              "D10:13",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 20,
+            "category": 2,
+            "source_q": "When did Caroline join a mentorship program?",
+            "source_answer": "The weekend before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:2"
+            ],
+            "generated_answer": "Last weekend, which was the weekend of July 15-16, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D9:2",
+              "D14:12",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 21,
+            "category": 2,
+            "source_q": "When did Caroline join a new activist group?",
+            "source_answer": "The Tuesday before 20 July 2023",
+            "source_evidence_ids": [
+              "D10:3"
+            ],
+            "generated_answer": "Caroline joined a new LGBTQ activist group last Tuesday, which was July 18, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D10:3",
+              "D14:12",
+              "D1:3",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 22,
+            "category": 2,
+            "source_q": "When is Melanie's daughter's birthday?",
+            "source_answer": "13 August",
+            "source_evidence_ids": [
+              "D11:1"
+            ],
+            "generated_answer": "Melanie's daughter's birthday was celebrated on August 13, 2023.",
+            "retrieved_evidence_ids": [
+              "D11:1",
+              "D4:5",
+              "D14:3",
+              "D1:13",
+              "D12:3"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 23,
+            "category": 2,
+            "source_q": "When did Caroline attend a pride parade in August?",
+            "source_answer": "The Friday before 14 August 2023",
+            "source_evidence_ids": [
+              "D11:4"
+            ],
+            "generated_answer": "Caroline attended a pride parade on Friday, August 11, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D8:17",
+              "D5:1",
+              "D10:7",
+              "D11:4"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 24,
+            "category": 2,
+            "source_q": "When did Caroline and Melanie go to a pride fesetival together?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D12:15"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D8:22",
+              "D1:18",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 25,
+            "category": 2,
+            "source_q": "When did Caroline apply to adoption agencies?",
+            "source_answer": "The week of 23 August 2023",
+            "source_evidence_ids": [
+              "D13:1"
+            ],
+            "generated_answer": "Caroline applied to adoption agencies on August 23, 2023.",
+            "retrieved_evidence_ids": [
+              "D2:8",
+              "D13:1",
+              "D2:10",
+              "D8:22",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 26,
+            "category": 2,
+            "source_q": "When did Caroline draw a self-portrait?",
+            "source_answer": "The week before 23 August 2023",
+            "source_evidence_ids": [
+              "D13:11"
+            ],
+            "generated_answer": "Caroline drew a self-portrait last week, which was the week of August 23, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:11",
+              "D11:13",
+              "D10:15",
+              "D15:13",
+              "D14:28"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 27,
+            "category": 2,
+            "source_q": "When did Caroline encounter people on a hike and have a negative experience?",
+            "source_answer": "The week before 25 August 2023",
+            "source_evidence_ids": [
+              "D14:1"
+            ],
+            "generated_answer": "1:50 pm on 17 August, 2023",
+            "retrieved_evidence_ids": [
+              "D8:20",
+              "D12:2",
+              "D12:1",
+              "D6:14",
+              "D5:2"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 28,
+            "category": 2,
+            "source_q": "When did Melanie make a plate in pottery class?",
+            "source_answer": "24 August 2023",
+            "source_evidence_ids": [
+              "D14:4"
+            ],
+            "generated_answer": "Melanie made the plate in pottery class yesterday, which was August 24, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D14:4",
+              "D14:28",
+              "D5:4",
+              "D8:20"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 29,
+            "category": 2,
+            "source_q": "When did Melanie go to the park?",
+            "source_answer": "27 August 2023",
+            "source_evidence_ids": [
+              "D15:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D16:19",
+              "D14:3",
+              "D5:3",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 30,
+            "category": 2,
+            "source_q": "When is Caroline's youth center putting on a talent show?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D15:11"
+            ],
+            "generated_answer": "Next month.",
+            "retrieved_evidence_ids": [
+              "D15:11",
+              "D14:33",
+              "D15:9",
+              "D15:3",
+              "D9:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 31,
+            "category": 2,
+            "source_q": "When did Caroline go biking with friends?",
+            "source_answer": "The weekend before 13 September 2023",
+            "source_evidence_ids": [
+              "D16:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D3:22",
+              "D6:12",
+              "D1:18",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 32,
+            "category": 2,
+            "source_q": "How long has Melanie been practicing art?",
+            "source_answer": "Since 2016",
+            "source_evidence_ids": [
+              "D16:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:27",
+              "D16:6",
+              "D6:1",
+              "D3:15",
+              "D16:7"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 33,
+            "category": 2,
+            "source_q": "When did Melanie's friend adopt a child?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D17:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:37",
+              "D14:3",
+              "D13:1",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 34,
+            "category": 2,
+            "source_q": "When did Melanie get hurt?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D17:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D10:15",
+              "D15:13",
+              "D14:28",
+              "D8:18"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 35,
+            "category": 2,
+            "source_q": "When did Melanie's family go on a roadtrip?",
+            "source_answer": "The weekend before 20 October 2023",
+            "source_evidence_ids": [
+              "D18:1"
+            ],
+            "generated_answer": "Melanie's family went on a roadtrip this past weekend, which was the weekend before October 20, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D18:1",
+              "D3:22",
+              "D3:11"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 36,
+            "category": 2,
+            "source_q": "When did Caroline pass the adoption interview?",
+            "source_answer": "The Friday before 22 October 2023",
+            "source_evidence_ids": [
+              "D19:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D10:15",
+              "D13:1",
+              "D15:13",
+              "D13:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 37,
+            "category": 2,
+            "source_q": "When did Melanie buy the figurines?",
+            "source_answer": "21 October 2023",
+            "source_evidence_ids": [
+              "D19:2"
+            ],
+            "generated_answer": "Melanie bought the figurines on October 21, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D19:2",
+              "D10:15",
+              "D15:13",
+              "D14:28"
+            ],
+            "status": "correct"
+          }
+        ]
+      },
+      {
+        "name": "svm",
+        "total_answer_right": 19,
+        "accuracy": 0.5135135135135135,
+        "q_lvl": [
+          {
+            "qid": 1,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ support group?",
+            "source_answer": "7 May 2023",
+            "source_evidence_ids": [
+              "D1:3"
+            ],
+            "generated_answer": "Caroline went to the LGBTQ support group on May 7, 2023.",
+            "retrieved_evidence_ids": [
+              "D1:3",
+              "D13:7",
+              "D1:7",
+              "D10:5",
+              "D1:18"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 2,
+            "category": 2,
+            "source_q": "When did Melanie paint a sunrise?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D1:12"
+            ],
+            "generated_answer": "Melanie painted the lake sunrise last year.",
+            "retrieved_evidence_ids": [
+              "D1:14",
+              "D14:3",
+              "D10:15",
+              "D13:10",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 3,
+            "category": 2,
+            "source_q": "When did Melanie run a charity race?",
+            "source_answer": "The sunday before 25 May 2023",
+            "source_evidence_ids": [
+              "D2:1"
+            ],
+            "generated_answer": "Melanie ran a charity race last Saturday.",
+            "retrieved_evidence_ids": [
+              "D2:2",
+              "D2:1",
+              "D14:3",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 4,
+            "category": 2,
+            "source_q": "When is Melanie planning on going camping?",
+            "source_answer": "June 2023",
+            "source_evidence_ids": [
+              "D2:7"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:1",
+              "D4:18",
+              "D14:32",
+              "D10:13",
+              "D6:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 5,
+            "category": 2,
+            "source_q": "When did Caroline give a speech at a school?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D10:15",
+              "D8:28",
+              "D15:13",
+              "D3:11",
+              "D14:28"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 6,
+            "category": 2,
+            "source_q": "When did Caroline meet up with her friends, family, and mentors?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:11"
+            ],
+            "generated_answer": "Last week, as mentioned in the message from [7:55 pm on 9 June, 2023].",
+            "retrieved_evidence_ids": [
+              "D3:11",
+              "D3:22",
+              "D4:10",
+              "D16:5",
+              "D15:4"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 7,
+            "category": 2,
+            "source_q": "How long has Caroline had her current group of friends for?",
+            "source_answer": "4 years",
+            "source_evidence_ids": [
+              "D3:13"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D3:12",
+              "D10:20",
+              "D1:7",
+              "D8:27",
+              "D6:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 8,
+            "category": 2,
+            "source_q": "How long ago was Caroline's 18th birthday?",
+            "source_answer": "10 years ago",
+            "source_evidence_ids": [
+              "D4:5"
+            ],
+            "generated_answer": "Ten years ago.",
+            "retrieved_evidence_ids": [
+              "D4:5",
+              "D16:6",
+              "D3:15",
+              "D11:1",
+              "D8:27"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 9,
+            "category": 2,
+            "source_q": "When did Melanie sign up for a pottery class?",
+            "source_answer": "2 July 2023",
+            "source_evidence_ids": [
+              "D5:4"
+            ],
+            "generated_answer": "Melanie signed up for a pottery class on July 3, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:4",
+              "D16:17",
+              "D5:4",
+              "D16:18",
+              "D14:3"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 10,
+            "category": 2,
+            "source_q": "When is Caroline going to the transgender conference?",
+            "source_answer": "July 2023",
+            "source_evidence_ids": [
+              "D5:13"
+            ],
+            "generated_answer": "Caroline is going to a transgender conference this month.",
+            "retrieved_evidence_ids": [
+              "D5:13",
+              "D1:5",
+              "D12:11",
+              "D14:12",
+              "D3:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 11,
+            "category": 2,
+            "source_q": "When did Melanie go to the museum?",
+            "source_answer": "5 July 2023",
+            "source_evidence_ids": [
+              "D6:4"
+            ],
+            "generated_answer": "Melanie went to the museum on July 2, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D6:4",
+              "D5:3",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 12,
+            "category": 2,
+            "source_q": "When did Caroline have a picnic?",
+            "source_answer": "The week before 6 July 2023",
+            "source_evidence_ids": [
+              "D6:11"
+            ],
+            "generated_answer": "Caroline had a picnic last week, which was the week of July 3rd, 2023.",
+            "retrieved_evidence_ids": [
+              "D6:11",
+              "D12:10",
+              "D10:15",
+              "D15:13",
+              "D5:14"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 13,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ conference?",
+            "source_answer": "10 July 2023",
+            "source_evidence_ids": [
+              "D7:1"
+            ],
+            "generated_answer": "Caroline is going to a transgender conference this month.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D5:13",
+              "D1:18",
+              "D8:22",
+              "D5:3"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 14,
+            "category": 2,
+            "source_q": "When did Melanie read the book \"nothing is impossible\"?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D7:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D7:8",
+              "D10:15",
+              "D17:10",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 15,
+            "category": 2,
+            "source_q": "When did Caroline go to the adoption meeting?",
+            "source_answer": "The friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:9"
+            ],
+            "generated_answer": "July 15, 2023",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D2:13",
+              "D8:9",
+              "D1:18",
+              "D13:1"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 16,
+            "category": 2,
+            "source_q": "When did Melanie go to the pottery workshop?",
+            "source_answer": "The Friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:2"
+            ],
+            "generated_answer": "Last Friday, July 14, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:2",
+              "D14:3",
+              "D12:3",
+              "D5:5"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 17,
+            "category": 2,
+            "source_q": "When did Melanie go camping in June?",
+            "source_answer": "The week before 27 June 2023",
+            "source_evidence_ids": [
+              "D4:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D13:7",
+              "D14:3",
+              "D10:13",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 18,
+            "category": 2,
+            "source_q": "When did Caroline go to a pride parade during the summer?",
+            "source_answer": "The week before 3 July 2023",
+            "source_evidence_ids": [
+              "D5:1"
+            ],
+            "generated_answer": "Caroline went to a pride parade a few weeks before July 15, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:17",
+              "D8:29",
+              "D2:7",
+              "D18:14"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 19,
+            "category": 2,
+            "source_q": "When did Melanie go camping in July?",
+            "source_answer": "two weekends before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D13:7",
+              "D14:3",
+              "D10:13",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 20,
+            "category": 2,
+            "source_q": "When did Caroline join a mentorship program?",
+            "source_answer": "The weekend before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:2"
+            ],
+            "generated_answer": "Last weekend, which was the weekend of July 15-16, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D9:2",
+              "D14:12",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 21,
+            "category": 2,
+            "source_q": "When did Caroline join a new activist group?",
+            "source_answer": "The Tuesday before 20 July 2023",
+            "source_evidence_ids": [
+              "D10:3"
+            ],
+            "generated_answer": "Caroline joined a new LGBTQ activist group last Tuesday, which was July 18, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D10:3",
+              "D14:12",
+              "D1:3",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 22,
+            "category": 2,
+            "source_q": "When is Melanie's daughter's birthday?",
+            "source_answer": "13 August",
+            "source_evidence_ids": [
+              "D11:1"
+            ],
+            "generated_answer": "Melanie's daughter's birthday was celebrated on August 13, 2023.",
+            "retrieved_evidence_ids": [
+              "D11:1",
+              "D4:5",
+              "D14:3",
+              "D1:13",
+              "D12:3"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 23,
+            "category": 2,
+            "source_q": "When did Caroline attend a pride parade in August?",
+            "source_answer": "The Friday before 14 August 2023",
+            "source_evidence_ids": [
+              "D11:4"
+            ],
+            "generated_answer": "Caroline attended a pride parade on Friday, August 11, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D8:17",
+              "D5:1",
+              "D10:7",
+              "D11:4"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 24,
+            "category": 2,
+            "source_q": "When did Caroline and Melanie go to a pride fesetival together?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D12:15"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D8:22",
+              "D1:18",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 25,
+            "category": 2,
+            "source_q": "When did Caroline apply to adoption agencies?",
+            "source_answer": "The week of 23 August 2023",
+            "source_evidence_ids": [
+              "D13:1"
+            ],
+            "generated_answer": "Caroline applied to adoption agencies on August 23, 2023.",
+            "retrieved_evidence_ids": [
+              "D2:8",
+              "D13:1",
+              "D2:10",
+              "D8:22",
+              "D10:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 26,
+            "category": 2,
+            "source_q": "When did Caroline draw a self-portrait?",
+            "source_answer": "The week before 23 August 2023",
+            "source_evidence_ids": [
+              "D13:11"
+            ],
+            "generated_answer": "Caroline drew a self-portrait last week, which was the week of August 23, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:11",
+              "D11:13",
+              "D10:15",
+              "D15:13",
+              "D14:28"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 27,
+            "category": 2,
+            "source_q": "When did Caroline encounter people on a hike and have a negative experience?",
+            "source_answer": "The week before 25 August 2023",
+            "source_evidence_ids": [
+              "D14:1"
+            ],
+            "generated_answer": "1:50 pm on 17 August, 2023",
+            "retrieved_evidence_ids": [
+              "D8:20",
+              "D12:2",
+              "D12:1",
+              "D6:14",
+              "D5:2"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 28,
+            "category": 2,
+            "source_q": "When did Melanie make a plate in pottery class?",
+            "source_answer": "24 August 2023",
+            "source_evidence_ids": [
+              "D14:4"
+            ],
+            "generated_answer": "Melanie made the plate in pottery class yesterday, which was August 24, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D14:4",
+              "D14:28",
+              "D5:4",
+              "D8:20"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 29,
+            "category": 2,
+            "source_q": "When did Melanie go to the park?",
+            "source_answer": "27 August 2023",
+            "source_evidence_ids": [
+              "D15:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D16:19",
+              "D14:3",
+              "D5:3",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 30,
+            "category": 2,
+            "source_q": "When is Caroline's youth center putting on a talent show?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D15:11"
+            ],
+            "generated_answer": "Next month.",
+            "retrieved_evidence_ids": [
+              "D15:11",
+              "D14:33",
+              "D15:9",
+              "D15:3",
+              "D9:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 31,
+            "category": 2,
+            "source_q": "When did Caroline go biking with friends?",
+            "source_answer": "The weekend before 13 September 2023",
+            "source_evidence_ids": [
+              "D16:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D3:22",
+              "D6:12",
+              "D1:18",
+              "D10:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 32,
+            "category": 2,
+            "source_q": "How long has Melanie been practicing art?",
+            "source_answer": "Since 2016",
+            "source_evidence_ids": [
+              "D16:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:27",
+              "D16:6",
+              "D6:1",
+              "D3:15",
+              "D16:7"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 33,
+            "category": 2,
+            "source_q": "When did Melanie's friend adopt a child?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D17:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:37",
+              "D14:3",
+              "D13:1",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 34,
+            "category": 2,
+            "source_q": "When did Melanie get hurt?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D17:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D10:15",
+              "D15:13",
+              "D14:28",
+              "D8:18"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 35,
+            "category": 2,
+            "source_q": "When did Melanie's family go on a roadtrip?",
+            "source_answer": "The weekend before 20 October 2023",
+            "source_evidence_ids": [
+              "D18:1"
+            ],
+            "generated_answer": "Melanie's family went on a roadtrip this past weekend, which was the weekend before October 20, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:3",
+              "D18:1",
+              "D3:22",
+              "D3:11"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 36,
+            "category": 2,
+            "source_q": "When did Caroline pass the adoption interview?",
+            "source_answer": "The Friday before 22 October 2023",
+            "source_evidence_ids": [
+              "D19:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D10:15",
+              "D13:1",
+              "D15:13",
+              "D13:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 37,
+            "category": 2,
+            "source_q": "When did Melanie buy the figurines?",
+            "source_answer": "21 October 2023",
+            "source_evidence_ids": [
+              "D19:2"
+            ],
+            "generated_answer": "Melanie bought the figurines on October 21, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D19:2",
+              "D10:15",
+              "D15:13",
+              "D14:28"
+            ],
+            "status": "correct"
+          }
+        ]
+      },
+      {
+        "name": "faiss",
+        "total_answer_right": 5,
+        "accuracy": 0.13513513513513514,
+        "q_lvl": [
+          {
+            "qid": 1,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ support group?",
+            "source_answer": "7 May 2023",
+            "source_evidence_ids": [
+              "D1:3"
+            ],
+            "generated_answer": "Caroline went to the LGBTQ support group on 7 May, 2023.",
+            "retrieved_evidence_ids": [
+              "D9:11",
+              "D14:34",
+              "D1:3",
+              "D5:2",
+              "D8:22"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 2,
+            "category": 2,
+            "source_q": "When did Melanie paint a sunrise?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D1:12"
+            ],
+            "generated_answer": "Melanie painted the lake sunrise last year.",
+            "retrieved_evidence_ids": [
+              "D1:13",
+              "D1:14",
+              "D14:6",
+              "D1:15",
+              "D6:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 3,
+            "category": 2,
+            "source_q": "When did Melanie run a charity race?",
+            "source_answer": "The sunday before 25 May 2023",
+            "source_evidence_ids": [
+              "D2:1"
+            ],
+            "generated_answer": "Melanie ran a charity race on 25 May, 2023.",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D6:5",
+              "D2:2",
+              "D17:25"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 4,
+            "category": 2,
+            "source_q": "When is Melanie planning on going camping?",
+            "source_answer": "June 2023",
+            "source_evidence_ids": [
+              "D2:7"
+            ],
+            "generated_answer": "Melanie is thinking about going camping next month, which would be in June.",
+            "retrieved_evidence_ids": [
+              "D10:12",
+              "D2:7",
+              "D4:9",
+              "D10:13",
+              "D17:25"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 5,
+            "category": 2,
+            "source_q": "When did Caroline give a speech at a school?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D14:18",
+              "D6:2",
+              "D17:26",
+              "D8:14"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 6,
+            "category": 2,
+            "source_q": "When did Caroline meet up with her friends, family, and mentors?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D8:22",
+              "D17:26",
+              "D14:18",
+              "D3:22"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 7,
+            "category": 2,
+            "source_q": "How long has Caroline had her current group of friends for?",
+            "source_answer": "4 years",
+            "source_evidence_ids": [
+              "D3:13"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:22",
+              "D6:2",
+              "D1:4",
+              "D3:22",
+              "D8:38"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 8,
+            "category": 2,
+            "source_q": "How long ago was Caroline's 18th birthday?",
+            "source_answer": "10 years ago",
+            "source_evidence_ids": [
+              "D4:5"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D8:14",
+              "D11:1",
+              "D1:4",
+              "D6:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 9,
+            "category": 2,
+            "source_q": "When did Melanie sign up for a pottery class?",
+            "source_answer": "2 July 2023",
+            "source_evidence_ids": [
+              "D5:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D12:3",
+              "D14:4",
+              "D16:11",
+              "D17:25"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 10,
+            "category": 2,
+            "source_q": "When is Caroline going to the transgender conference?",
+            "source_answer": "July 2023",
+            "source_evidence_ids": [
+              "D5:13"
+            ],
+            "generated_answer": "This month.",
+            "retrieved_evidence_ids": [
+              "D14:34",
+              "D5:13",
+              "D9:11",
+              "D5:16",
+              "D14:35"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 11,
+            "category": 2,
+            "source_q": "When did Melanie go to the museum?",
+            "source_answer": "5 July 2023",
+            "source_evidence_ids": [
+              "D6:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D6:5",
+              "D8:23",
+              "D10:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 12,
+            "category": 2,
+            "source_q": "When did Caroline have a picnic?",
+            "source_answer": "The week before 6 July 2023",
+            "source_evidence_ids": [
+              "D6:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:14",
+              "D4:8",
+              "D1:4",
+              "D14:18",
+              "D6:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 13,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ conference?",
+            "source_answer": "10 July 2023",
+            "source_evidence_ids": [
+              "D7:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D9:11",
+              "D14:34",
+              "D5:2",
+              "D3:2",
+              "D8:22"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 14,
+            "category": 2,
+            "source_q": "When did Melanie read the book \"nothing is impossible\"?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D7:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:25",
+              "D11:16",
+              "D4:1",
+              "D8:23",
+              "D4:9"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 15,
+            "category": 2,
+            "source_q": "When did Caroline go to the adoption meeting?",
+            "source_answer": "The friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:9"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D8:22",
+              "D2:9",
+              "D19:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 16,
+            "category": 2,
+            "source_q": "When did Melanie go to the pottery workshop?",
+            "source_answer": "The Friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:2"
+            ],
+            "generated_answer": "Melanie made her pottery project in pottery class yesterday, which was August 24, 2023.",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D12:3",
+              "D16:11",
+              "D14:4",
+              "D17:9"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 17,
+            "category": 2,
+            "source_q": "When did Melanie go camping in June?",
+            "source_answer": "The week before 27 June 2023",
+            "source_evidence_ids": [
+              "D4:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D6:5",
+              "D8:23",
+              "D4:8",
+              "D17:25"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 18,
+            "category": 2,
+            "source_q": "When did Caroline go to a pride parade during the summer?",
+            "source_answer": "The week before 3 July 2023",
+            "source_evidence_ids": [
+              "D5:1"
+            ],
+            "generated_answer": "Caroline attended a pride parade last weekend, which was the weekend of July 15th, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:14",
+              "D1:4",
+              "D10:7",
+              "D10:8",
+              "D5:2"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 19,
+            "category": 2,
+            "source_q": "When did Melanie go camping in July?",
+            "source_answer": "two weekends before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D6:5",
+              "D4:8",
+              "D10:23",
+              "D8:23"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 20,
+            "category": 2,
+            "source_q": "When did Caroline join a mentorship program?",
+            "source_answer": "The weekend before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D17:26",
+              "D14:18",
+              "D8:22",
+              "D9:4"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 21,
+            "category": 2,
+            "source_q": "When did Caroline join a new activist group?",
+            "source_answer": "The Tuesday before 20 July 2023",
+            "source_evidence_ids": [
+              "D10:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D18:11",
+              "D9:11",
+              "D18:13",
+              "D6:14"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 22,
+            "category": 2,
+            "source_q": "When is Melanie's daughter's birthday?",
+            "source_answer": "13 August",
+            "source_evidence_ids": [
+              "D11:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D10:1",
+              "D17:25",
+              "D18:12"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 23,
+            "category": 2,
+            "source_q": "When did Caroline attend a pride parade in August?",
+            "source_answer": "The Friday before 14 August 2023",
+            "source_evidence_ids": [
+              "D11:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:14",
+              "D10:7",
+              "D9:8",
+              "D5:2",
+              "D5:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 24,
+            "category": 2,
+            "source_q": "When did Caroline and Melanie go to a pride fesetival together?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D12:15"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:22",
+              "D14:18",
+              "D9:11",
+              "D8:14",
+              "D1:4"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 25,
+            "category": 2,
+            "source_q": "When did Caroline apply to adoption agencies?",
+            "source_answer": "The week of 23 August 2023",
+            "source_evidence_ids": [
+              "D13:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D2:8",
+              "D2:9",
+              "D19:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 26,
+            "category": 2,
+            "source_q": "When did Caroline draw a self-portrait?",
+            "source_answer": "The week before 23 August 2023",
+            "source_evidence_ids": [
+              "D13:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D17:22",
+              "D9:17",
+              "D16:12",
+              "D9:15"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 27,
+            "category": 2,
+            "source_q": "When did Caroline encounter people on a hike and have a negative experience?",
+            "source_answer": "The week before 25 August 2023",
+            "source_evidence_ids": [
+              "D14:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D17:26",
+              "D4:8",
+              "D12:12",
+              "D8:32"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 28,
+            "category": 2,
+            "source_q": "When did Melanie make a plate in pottery class?",
+            "source_answer": "24 August 2023",
+            "source_evidence_ids": [
+              "D14:4"
+            ],
+            "generated_answer": "Melanie made the plate in pottery class yesterday, which was August 24, 2023.",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D12:3",
+              "D14:3",
+              "D16:11",
+              "D14:4"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 29,
+            "category": 2,
+            "source_q": "When did Melanie go to the park?",
+            "source_answer": "27 August 2023",
+            "source_evidence_ids": [
+              "D15:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D8:23",
+              "D10:23",
+              "D6:5",
+              "D10:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 30,
+            "category": 2,
+            "source_q": "When is Caroline's youth center putting on a talent show?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D15:11"
+            ],
+            "generated_answer": "Next month.",
+            "retrieved_evidence_ids": [
+              "D15:11",
+              "D15:12",
+              "D12:20",
+              "D11:1",
+              "D14:34"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 31,
+            "category": 2,
+            "source_q": "When did Caroline go biking with friends?",
+            "source_answer": "The weekend before 13 September 2023",
+            "source_evidence_ids": [
+              "D16:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:26",
+              "D1:4",
+              "D14:18",
+              "D6:2",
+              "D8:22"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 32,
+            "category": 2,
+            "source_q": "How long has Melanie been practicing art?",
+            "source_answer": "Since 2016",
+            "source_evidence_ids": [
+              "D16:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:15",
+              "D5:5",
+              "D1:13",
+              "D16:6",
+              "D14:31"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 33,
+            "category": 2,
+            "source_q": "When did Melanie's friend adopt a child?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D17:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D19:1",
+              "D4:9",
+              "D10:23",
+              "D17:25",
+              "D8:29"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 34,
+            "category": 2,
+            "source_q": "When did Melanie get hurt?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D17:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D4:1",
+              "D17:25",
+              "D10:23",
+              "D11:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 35,
+            "category": 2,
+            "source_q": "When did Melanie's family go on a roadtrip?",
+            "source_answer": "The weekend before 20 October 2023",
+            "source_evidence_ids": [
+              "D18:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D8:29",
+              "D18:12",
+              "D17:25"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 36,
+            "category": 2,
+            "source_q": "When did Caroline pass the adoption interview?",
+            "source_answer": "The Friday before 22 October 2023",
+            "source_evidence_ids": [
+              "D19:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D8:22",
+              "D2:9",
+              "D1:4"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 37,
+            "category": 2,
+            "source_q": "When did Melanie buy the figurines?",
+            "source_answer": "21 October 2023",
+            "source_evidence_ids": [
+              "D19:2"
+            ],
+            "generated_answer": "Melanie bought the figurines yesterday, October 21, 2023.",
+            "retrieved_evidence_ids": [
+              "D6:5",
+              "D4:9",
+              "D19:2",
+              "D10:23",
+              "D4:5"
+            ],
+            "status": "correct"
+          }
+        ]
+      },
+      {
+        "name": "nanopq",
+        "total_answer_right": 5,
+        "accuracy": 0.13513513513513514,
+        "q_lvl": [
+          {
+            "qid": 1,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ support group?",
+            "source_answer": "7 May 2023",
+            "source_evidence_ids": [
+              "D1:3"
+            ],
+            "generated_answer": "Caroline went to the LGBTQ support group on 7 May, 2023.",
+            "retrieved_evidence_ids": [
+              "D9:11",
+              "D14:34",
+              "D1:3",
+              "D11:6",
+              "D3:2"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 2,
+            "category": 2,
+            "source_q": "When did Melanie paint a sunrise?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D1:12"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:13",
+              "D8:23",
+              "D17:25",
+              "D14:6",
+              "D6:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 3,
+            "category": 2,
+            "source_q": "When did Melanie run a charity race?",
+            "source_answer": "The sunday before 25 May 2023",
+            "source_evidence_ids": [
+              "D2:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:23",
+              "D17:25",
+              "D10:23",
+              "D4:9",
+              "D6:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 4,
+            "category": 2,
+            "source_q": "When is Melanie planning on going camping?",
+            "source_answer": "June 2023",
+            "source_evidence_ids": [
+              "D2:7"
+            ],
+            "generated_answer": "Melanie went camping with her family last week, as mentioned in the message from June 27, 2023. She also mentioned going camping with her family two weekends prior to July 17, 2023.",
+            "retrieved_evidence_ids": [
+              "D10:12",
+              "D8:23",
+              "D17:25",
+              "D9:1",
+              "D4:6"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 5,
+            "category": 2,
+            "source_q": "When did Caroline give a speech at a school?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D1:4",
+              "D12:10",
+              "D6:2",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 6,
+            "category": 2,
+            "source_q": "When did Caroline meet up with her friends, family, and mentors?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:36",
+              "D12:10",
+              "D3:22",
+              "D8:32",
+              "D1:4"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 7,
+            "category": 2,
+            "source_q": "How long has Caroline had her current group of friends for?",
+            "source_answer": "4 years",
+            "source_evidence_ids": [
+              "D3:13"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D12:10",
+              "D8:22",
+              "D8:36",
+              "D8:32",
+              "D3:22"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 8,
+            "category": 2,
+            "source_q": "How long ago was Caroline's 18th birthday?",
+            "source_answer": "10 years ago",
+            "source_evidence_ids": [
+              "D4:5"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D1:4",
+              "D11:1",
+              "D8:14",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 9,
+            "category": 2,
+            "source_q": "When did Melanie sign up for a pottery class?",
+            "source_answer": "2 July 2023",
+            "source_evidence_ids": [
+              "D5:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D12:3",
+              "D12:2",
+              "D16:9",
+              "D16:11"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 10,
+            "category": 2,
+            "source_q": "When is Caroline going to the transgender conference?",
+            "source_answer": "July 2023",
+            "source_evidence_ids": [
+              "D5:13"
+            ],
+            "generated_answer": "Caroline is going to a transgender conference \"this month\" according to a message sent on July 3, 2023.",
+            "retrieved_evidence_ids": [
+              "D14:34",
+              "D9:11",
+              "D5:13",
+              "D5:16",
+              "D12:18"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 11,
+            "category": 2,
+            "source_q": "When did Melanie go to the museum?",
+            "source_answer": "5 July 2023",
+            "source_evidence_ids": [
+              "D6:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:25",
+              "D8:23",
+              "D10:23",
+              "D4:9",
+              "D6:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 12,
+            "category": 2,
+            "source_q": "When did Caroline have a picnic?",
+            "source_answer": "The week before 6 July 2023",
+            "source_evidence_ids": [
+              "D6:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D4:8",
+              "D11:1",
+              "D1:4",
+              "D8:14"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 13,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ conference?",
+            "source_answer": "10 July 2023",
+            "source_evidence_ids": [
+              "D7:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D9:11",
+              "D14:34",
+              "D3:2",
+              "D11:6",
+              "D5:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 14,
+            "category": 2,
+            "source_q": "When did Melanie read the book \"nothing is impossible\"?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D7:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:25",
+              "D8:23",
+              "D4:1",
+              "D15:1",
+              "D10:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 15,
+            "category": 2,
+            "source_q": "When did Caroline go to the adoption meeting?",
+            "source_answer": "The friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:9"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D10:24",
+              "D2:17",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 16,
+            "category": 2,
+            "source_q": "When did Melanie go to the pottery workshop?",
+            "source_answer": "The Friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D12:3",
+              "D12:2",
+              "D16:9",
+              "D16:11"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 17,
+            "category": 2,
+            "source_q": "When did Melanie go camping in June?",
+            "source_answer": "The week before 27 June 2023",
+            "source_evidence_ids": [
+              "D4:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:23",
+              "D17:25",
+              "D6:5",
+              "D10:23",
+              "D4:9"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 18,
+            "category": 2,
+            "source_q": "When did Caroline go to a pride parade during the summer?",
+            "source_answer": "The week before 3 July 2023",
+            "source_evidence_ids": [
+              "D5:1"
+            ],
+            "generated_answer": "Caroline went to an LGBTQ+ pride parade on July 3, 2023.",
+            "retrieved_evidence_ids": [
+              "D11:1",
+              "D5:1",
+              "D10:7",
+              "D14:18",
+              "D8:14"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 19,
+            "category": 2,
+            "source_q": "When did Melanie go camping in July?",
+            "source_answer": "two weekends before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:23",
+              "D17:25",
+              "D4:9",
+              "D10:23",
+              "D6:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 20,
+            "category": 2,
+            "source_q": "When did Caroline join a mentorship program?",
+            "source_answer": "The weekend before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D12:10",
+              "D14:18",
+              "D9:5",
+              "D19:10"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 21,
+            "category": 2,
+            "source_q": "When did Caroline join a new activist group?",
+            "source_answer": "The Tuesday before 20 July 2023",
+            "source_evidence_ids": [
+              "D10:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D19:13",
+              "D18:11",
+              "D14:14",
+              "D18:13",
+              "D12:12"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 22,
+            "category": 2,
+            "source_q": "When is Melanie's daughter's birthday?",
+            "source_answer": "13 August",
+            "source_evidence_ids": [
+              "D11:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D17:25",
+              "D8:23",
+              "D18:12"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 23,
+            "category": 2,
+            "source_q": "When did Caroline attend a pride parade in August?",
+            "source_answer": "The Friday before 14 August 2023",
+            "source_evidence_ids": [
+              "D11:4"
+            ],
+            "generated_answer": "Caroline attended a pride parade on Friday, August 11, 2023.",
+            "retrieved_evidence_ids": [
+              "D10:7",
+              "D5:1",
+              "D5:2",
+              "D11:4",
+              "D9:8"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 24,
+            "category": 2,
+            "source_q": "When did Caroline and Melanie go to a pride fesetival together?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D12:15"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D8:23",
+              "D17:25",
+              "D12:10",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 25,
+            "category": 2,
+            "source_q": "When did Caroline apply to adoption agencies?",
+            "source_answer": "The week of 23 August 2023",
+            "source_evidence_ids": [
+              "D13:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D17:7",
+              "D17:4",
+              "D2:9"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 26,
+            "category": 2,
+            "source_q": "When did Caroline draw a self-portrait?",
+            "source_answer": "The week before 23 August 2023",
+            "source_evidence_ids": [
+              "D13:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D9:17",
+              "D17:22",
+              "D9:15",
+              "D16:12"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 27,
+            "category": 2,
+            "source_q": "When did Caroline encounter people on a hike and have a negative experience?",
+            "source_answer": "The week before 25 August 2023",
+            "source_evidence_ids": [
+              "D14:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:4",
+              "D17:26",
+              "D4:8",
+              "D14:18",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 28,
+            "category": 2,
+            "source_q": "When did Melanie make a plate in pottery class?",
+            "source_answer": "24 August 2023",
+            "source_evidence_ids": [
+              "D14:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D5:5",
+              "D16:11",
+              "D16:9",
+              "D4:5",
+              "D12:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 29,
+            "category": 2,
+            "source_q": "When did Melanie go to the park?",
+            "source_answer": "27 August 2023",
+            "source_evidence_ids": [
+              "D15:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:23",
+              "D17:25",
+              "D4:9",
+              "D10:23",
+              "D15:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 30,
+            "category": 2,
+            "source_q": "When is Caroline's youth center putting on a talent show?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D15:11"
+            ],
+            "generated_answer": "Next month.",
+            "retrieved_evidence_ids": [
+              "D15:11",
+              "D15:12",
+              "D11:1",
+              "D17:26",
+              "D14:18"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 31,
+            "category": 2,
+            "source_q": "When did Caroline go biking with friends?",
+            "source_answer": "The weekend before 13 September 2023",
+            "source_evidence_ids": [
+              "D16:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:18",
+              "D17:26",
+              "D1:4",
+              "D12:10",
+              "D8:36"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 32,
+            "category": 2,
+            "source_q": "How long has Melanie been practicing art?",
+            "source_answer": "Since 2016",
+            "source_evidence_ids": [
+              "D16:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D1:13",
+              "D16:14",
+              "D17:25",
+              "D8:23",
+              "D5:5"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 33,
+            "category": 2,
+            "source_q": "When did Melanie's friend adopt a child?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D17:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:25",
+              "D8:23",
+              "D10:23",
+              "D4:9",
+              "D19:3"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 34,
+            "category": 2,
+            "source_q": "When did Melanie get hurt?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D17:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D17:25",
+              "D8:23",
+              "D4:9",
+              "D10:23",
+              "D10:1"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 35,
+            "category": 2,
+            "source_q": "When did Melanie's family go on a roadtrip?",
+            "source_answer": "The weekend before 20 October 2023",
+            "source_evidence_ids": [
+              "D18:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D4:9",
+              "D10:23",
+              "D18:12",
+              "D17:25",
+              "D8:23"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 36,
+            "category": 2,
+            "source_q": "When did Caroline pass the adoption interview?",
+            "source_answer": "The Friday before 22 October 2023",
+            "source_evidence_ids": [
+              "D19:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:13",
+              "D13:16",
+              "D8:22",
+              "D8:36",
+              "D2:17"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 37,
+            "category": 2,
+            "source_q": "When did Melanie buy the figurines?",
+            "source_answer": "21 October 2023",
+            "source_evidence_ids": [
+              "D19:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D6:5",
+              "D17:25",
+              "D8:23",
+              "D4:5",
+              "D4:9"
+            ],
+            "status": "incorrect"
+          }
+        ]
+      },
+      {
+        "name": "bm25",
+        "total_answer_right": 9,
+        "accuracy": 0.24324324324324326,
+        "q_lvl": [
+          {
+            "qid": 1,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ support group?",
+            "source_answer": "7 May 2023",
+            "source_evidence_ids": [
+              "D1:3"
+            ],
+            "generated_answer": "May 7, 2023",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D1:3",
+              "D9:10",
+              "D12:2",
+              "D4:15"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 2,
+            "category": 2,
+            "source_q": "When did Melanie paint a sunrise?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D1:12"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:6",
+              "D13:10",
+              "D10:15",
+              "D15:13",
+              "D8:11"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 3,
+            "category": 2,
+            "source_q": "When did Melanie run a charity race?",
+            "source_answer": "The sunday before 25 May 2023",
+            "source_evidence_ids": [
+              "D2:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D2:2",
+              "D10:15",
+              "D15:13",
+              "D8:11",
+              "D8:18"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 4,
+            "category": 2,
+            "source_q": "When is Melanie planning on going camping?",
+            "source_answer": "June 2023",
+            "source_evidence_ids": [
+              "D2:7"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D6:1",
+              "D4:18",
+              "D4:1",
+              "D14:32",
+              "D11:3"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 5,
+            "category": 2,
+            "source_q": "When did Caroline give a speech at a school?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D3:11",
+              "D10:14",
+              "D13:1",
+              "D2:8",
+              "D18:10"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 6,
+            "category": 2,
+            "source_q": "When did Caroline meet up with her friends, family, and mentors?",
+            "source_answer": "The week before 9 June 2023",
+            "source_evidence_ids": [
+              "D3:11"
+            ],
+            "generated_answer": "Caroline met up with her friends, family, and mentors last week, which was the week of June 9, 2023.",
+            "retrieved_evidence_ids": [
+              "D3:11",
+              "D3:22",
+              "D15:4",
+              "D10:14",
+              "D10:20"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 7,
+            "category": 2,
+            "source_q": "How long has Caroline had her current group of friends for?",
+            "source_answer": "4 years",
+            "source_evidence_ids": [
+              "D3:13"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D3:12",
+              "D1:7",
+              "D6:1",
+              "D10:20",
+              "D8:27"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 8,
+            "category": 2,
+            "source_q": "How long ago was Caroline's 18th birthday?",
+            "source_answer": "10 years ago",
+            "source_evidence_ids": [
+              "D4:5"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D3:15",
+              "D17:10",
+              "D16:7",
+              "D3:12",
+              "D16:6"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 9,
+            "category": 2,
+            "source_q": "When did Melanie sign up for a pottery class?",
+            "source_answer": "2 July 2023",
+            "source_evidence_ids": [
+              "D5:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D16:17",
+              "D5:12",
+              "D16:18",
+              "D6:7",
+              "D9:10"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 10,
+            "category": 2,
+            "source_q": "When is Caroline going to the transgender conference?",
+            "source_answer": "July 2023",
+            "source_evidence_ids": [
+              "D5:13"
+            ],
+            "generated_answer": "Caroline is going to the transgender conference this month.",
+            "retrieved_evidence_ids": [
+              "D5:13",
+              "D1:5",
+              "D9:4",
+              "D11:3",
+              "D14:12"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 11,
+            "category": 2,
+            "source_q": "When did Melanie go to the museum?",
+            "source_answer": "5 July 2023",
+            "source_evidence_ids": [
+              "D6:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D1:18",
+              "D1:17",
+              "D8:11",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 12,
+            "category": 2,
+            "source_q": "When did Caroline have a picnic?",
+            "source_answer": "The week before 6 July 2023",
+            "source_evidence_ids": [
+              "D6:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D12:10",
+              "D6:7",
+              "D17:12",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 13,
+            "category": 2,
+            "source_q": "When did Caroline go to the LGBTQ conference?",
+            "source_answer": "10 July 2023",
+            "source_evidence_ids": [
+              "D7:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D1:18",
+              "D1:17",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 14,
+            "category": 2,
+            "source_q": "When did Melanie read the book \"nothing is impossible\"?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D7:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D7:8",
+              "D14:3",
+              "D5:7",
+              "D14:30",
+              "D8:11"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 15,
+            "category": 2,
+            "source_q": "When did Caroline go to the adoption meeting?",
+            "source_answer": "The friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:9"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D13:1",
+              "D1:18",
+              "D1:17",
+              "D2:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 16,
+            "category": 2,
+            "source_q": "When did Melanie go to the pottery workshop?",
+            "source_answer": "The Friday before 15 July 2023",
+            "source_evidence_ids": [
+              "D8:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D12:3",
+              "D12:2",
+              "D1:18",
+              "D1:17"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 17,
+            "category": 2,
+            "source_q": "When did Melanie go camping in June?",
+            "source_answer": "The week before 27 June 2023",
+            "source_evidence_ids": [
+              "D4:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:11",
+              "D7:12",
+              "D8:32",
+              "D13:6"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 18,
+            "category": 2,
+            "source_q": "When did Caroline go to a pride parade during the summer?",
+            "source_answer": "The week before 3 July 2023",
+            "source_evidence_ids": [
+              "D5:1"
+            ],
+            "generated_answer": "Caroline went to a pride parade on Friday, August 11, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:17",
+              "D13:7",
+              "D12:16",
+              "D11:4",
+              "D8:29"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 19,
+            "category": 2,
+            "source_q": "When did Melanie go camping in July?",
+            "source_answer": "two weekends before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D8:11",
+              "D7:12",
+              "D8:32",
+              "D13:6"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 20,
+            "category": 2,
+            "source_q": "When did Caroline join a mentorship program?",
+            "source_answer": "The weekend before 17 July 2023",
+            "source_evidence_ids": [
+              "D9:2"
+            ],
+            "generated_answer": "Last weekend, which was the weekend of July 15-16, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D9:2",
+              "D14:12",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 21,
+            "category": 2,
+            "source_q": "When did Caroline join a new activist group?",
+            "source_answer": "The Tuesday before 20 July 2023",
+            "source_evidence_ids": [
+              "D10:3"
+            ],
+            "generated_answer": "Caroline joined a new LGBTQ activist group last Tuesday. The conversation where she mentions this occurred on 20 July, 2023. Therefore, she joined the group on 18 July, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:18",
+              "D10:3",
+              "D14:12",
+              "D10:15",
+              "D15:13"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 22,
+            "category": 2,
+            "source_q": "When is Melanie's daughter's birthday?",
+            "source_answer": "13 August",
+            "source_evidence_ids": [
+              "D11:1"
+            ],
+            "generated_answer": "Melanie's daughter's birthday was on August 13, 2023.",
+            "retrieved_evidence_ids": [
+              "D11:1",
+              "D6:7",
+              "D12:11",
+              "D2:3",
+              "D3:22"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 23,
+            "category": 2,
+            "source_q": "When did Caroline attend a pride parade in August?",
+            "source_answer": "The Friday before 14 August 2023",
+            "source_evidence_ids": [
+              "D11:4"
+            ],
+            "generated_answer": "Caroline attended a pride parade on Friday, August 11, 2023.",
+            "retrieved_evidence_ids": [
+              "D8:17",
+              "D14:23",
+              "D7:12",
+              "D11:4",
+              "D13:6"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 24,
+            "category": 2,
+            "source_q": "When did Caroline and Melanie go to a pride fesetival together?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D12:15"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D14:23",
+              "D1:17",
+              "D8:7",
+              "D8:33"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 25,
+            "category": 2,
+            "source_q": "When did Caroline apply to adoption agencies?",
+            "source_answer": "The week of 23 August 2023",
+            "source_evidence_ids": [
+              "D13:1"
+            ],
+            "generated_answer": "Caroline applied to adoption agencies on 23 August, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:1",
+              "D10:15",
+              "D15:13",
+              "D8:18",
+              "D2:13"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 26,
+            "category": 2,
+            "source_q": "When did Caroline draw a self-portrait?",
+            "source_answer": "The week before 23 August 2023",
+            "source_evidence_ids": [
+              "D13:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D10:15",
+              "D15:13",
+              "D8:18",
+              "D14:22",
+              "D16:17"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 27,
+            "category": 2,
+            "source_q": "When did Caroline encounter people on a hike and have a negative experience?",
+            "source_answer": "The week before 25 August 2023",
+            "source_evidence_ids": [
+              "D14:1"
+            ],
+            "generated_answer": "1:50 pm on 17 August, 2023",
+            "retrieved_evidence_ids": [
+              "D12:11",
+              "D6:7",
+              "D7:7",
+              "D15:9",
+              "D12:1"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 28,
+            "category": 2,
+            "source_q": "When did Melanie make a plate in pottery class?",
+            "source_answer": "24 August 2023",
+            "source_evidence_ids": [
+              "D14:4"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D14:3",
+              "D14:28",
+              "D8:20",
+              "D12:3",
+              "D12:2"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 29,
+            "category": 2,
+            "source_q": "When did Melanie go to the park?",
+            "source_answer": "27 August 2023",
+            "source_evidence_ids": [
+              "D15:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D1:18",
+              "D1:17",
+              "D8:11",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 30,
+            "category": 2,
+            "source_q": "When is Caroline's youth center putting on a talent show?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D15:11"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D15:11",
+              "D17:11",
+              "D15:9",
+              "D17:13",
+              "D14:33"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 31,
+            "category": 2,
+            "source_q": "When did Caroline go biking with friends?",
+            "source_answer": "The weekend before 13 September 2023",
+            "source_evidence_ids": [
+              "D16:1"
+            ],
+            "generated_answer": "Caroline went biking with friends last weekend, which was the weekend before 12:09 am on 13 September, 2023.",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D1:18",
+              "D3:22",
+              "D16:1",
+              "D1:17"
+            ],
+            "status": "correct"
+          },
+          {
+            "qid": 32,
+            "category": 2,
+            "source_q": "How long has Melanie been practicing art?",
+            "source_answer": "Since 2016",
+            "source_evidence_ids": [
+              "D16:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D16:6",
+              "D16:7",
+              "D6:1",
+              "D3:15",
+              "D8:27"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 33,
+            "category": 2,
+            "source_q": "When did Melanie's friend adopt a child?",
+            "source_answer": "2022",
+            "source_evidence_ids": [
+              "D17:3"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:37",
+              "D17:3",
+              "D10:15",
+              "D15:13",
+              "D8:18"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 34,
+            "category": 2,
+            "source_q": "When did Melanie get hurt?",
+            "source_answer": "September 2023",
+            "source_evidence_ids": [
+              "D17:8"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D10:15",
+              "D15:13",
+              "D8:11",
+              "D8:18",
+              "D14:22"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 35,
+            "category": 2,
+            "source_q": "When did Melanie's family go on a roadtrip?",
+            "source_answer": "The weekend before 20 October 2023",
+            "source_evidence_ids": [
+              "D18:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:7",
+              "D3:11",
+              "D1:17",
+              "D1:18",
+              "D15:13"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 36,
+            "category": 2,
+            "source_q": "When did Caroline pass the adoption interview?",
+            "source_answer": "The Friday before 22 October 2023",
+            "source_evidence_ids": [
+              "D19:1"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D13:1",
+              "D2:13",
+              "D10:15",
+              "D15:13",
+              "D13:16"
+            ],
+            "status": "incorrect"
+          },
+          {
+            "qid": 37,
+            "category": 2,
+            "source_q": "When did Melanie buy the figurines?",
+            "source_answer": "21 October 2023",
+            "source_evidence_ids": [
+              "D19:2"
+            ],
+            "generated_answer": "Information not found in context",
+            "retrieved_evidence_ids": [
+              "D8:11",
+              "D10:15",
+              "D15:13",
+              "D8:18",
+              "D14:22"
+            ],
+            "status": "incorrect"
+          }
+        ]
+      }
+    ]
+  }
+]
