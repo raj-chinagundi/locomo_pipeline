@@ -40,13 +40,13 @@ retrievers:
   # to_run: "all"  # Uncomment to run all retrievers (requires LLM)
   
   # Number of documents to retrieve per query
-  top_k: 5
+  top_k: 10
   
   # Embedding model for vector-based retrievers
   embedding_model: "sentence-transformers/all-mpnet-base-v2"
   
   # Ensemble retriever weights [vector_weight, keyword_weight]
-  ensemble_weights: [0.75, 0.25]
+  ensemble_weights: [0.5, 0.5]
   
   # MultiQuery: number of query variations
   multiquery_variations: 3
@@ -56,8 +56,8 @@ retrievers:
   parent_chunk_overlap: 50
   
   # MMR: diversity parameter (0=all relevance, 1=all diversity)
-  mmr_diversity: 0.5
-  mmr_fetch_k: 20
+  mmr_diversity: 0.3
+  mmr_fetch_k: 30
 
 
 # Evaluation Configuration
@@ -111,4 +111,3 @@ output:
   
   # Timestamp format for result files (Options: "datetime", "unix")
   timestamp_format: "datetime"  # e.g., 20251018_143022
-

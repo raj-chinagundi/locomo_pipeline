@@ -1,0 +1,129 @@
+{
+    "Retrieval_System_Blueprint": {
+      "description": "Retriever catalog optimized for LOCOMO dataset - conversational memory about personal events, temporal queries, and speaker-specific information.",
+      "dataset_context": {
+        "name": "Locomo",
+        "description": "Conversational dialogues with personal memory questions",
+        "query_types": [
+          "temporal_events (When did X happen?)",
+          "speaker_specific (What did Caroline say?)",
+          "identity_relationships (Who is X?)",
+          "event_details (What happened at X?)"
+        ]
+      },
+      "retrievers": {
+        "bm25": {
+          "description": "Keyword-based (Okapi BM25) search. Ranks by term frequency and inverse document frequency. Best for exact name/term matches.",
+          "role": "lexical_search",
+          "strengths": [
+            "Perfect for finding exact names (Caroline, Melanie, specific places)",
+            "Excellent when query contains unique keywords (LGBTQ, medication names)"
+          ],
+          "limitations": [
+            "WARNING: Fails if the exact keywords are not present.",
+            "DO NOT USE for conceptual questions, even if they contain a keyword (e.g., a query about 'research' may not be answered by a doc that says 'looking into')."
+          ]
+        },
+        "faiss": {
+          "description": "Vector-based semantic search (FAISS). Finds conceptually similar documents, even without keyword overlap.",
+          "role": "semantic_search",
+          "strengths": [
+            "Best for conceptual or open-ended questions (e.g., 'What fields... pursue?')",
+            "Understands intent and synonyms (e.g., 'sad' ≈ 'depressed')."
+          ],
+          "limitations": [
+            "May fail on abstract concepts (e.g., 'identity') if the embedding model can't connect them.",
+            "Can be 'distracted' by semantically similar but irrelevant documents."
+          ]
+        },
+        "ensemble": {
+          "description": "Hybrid search. Combines keyword (BM25) and semantic (FAISS) results. A strong, reliable default.",
+          "role": "hybrid_search",
+          "strengths": [
+            "Best of both worlds: catches exact keywords AND understands concepts.",
+            "Excellent safe default when a query is mixed or unclear."
+          ],
+          "limitations": [
+            "Slightly slower as it runs two retrievers."
+          ]
+        },
+        "self_query": {
+          "description": "An 'intelligent' retriever that uses an LLM to extract metadata filters from the query *before* searching.",
+          "role": "metadata_aware_search",
+          "strengths": [
+            "ESSENTIAL for speaker-specific questions (e.g., 'What did *Caroline* say?').",
+            "Translates natural language ('yesterday', 'last week') into date filters.",
+            "Filters by speaker, date, or session."
+          ],
+          "limitations": [
+            "Requires an extra LLM call (slower).",
+            "Requires 'langchain-classic' package."
+          ]
+        },
+        "multiquery": {
+          "description": "A 'query expansion' retriever. Uses an LLM to rewrite a single query into multiple variations, increasing the chance of a match.",
+          "role": "query_expansion",
+          "strengths": [
+            "Fixes 'Weak Retriever' failures.",
+            "Excellent for ambiguous or abstract queries (e.g., 'What is Caroline's identity?' might become 'Who is Caroline?', 'Caroline's personal details', 'Caroline gender identity')."
+          ],
+          "limitations": [
+            "Requires an extra LLM call (slower).",
+            "Can sometimes add noise if variations are poor."
+          ]
+        },
+        "parent_document": {
+          "description": "Context-aware retriever. Finds small, relevant chunks and then retrieves the full session document they belong to.",
+          "role": "hierarchical_search",
+          "strengths": [
+            "Best for broad, summary-style questions (e.g., 'What was the main topic of the meeting?')",
+            "Provides full context to the LLM."
+          ],
+          "limitations": [
+            "Returns very large documents."
+          ]
+        },
+        "mmr": {
+          "description": "Maximal Marginal Relevance (MMR). A semantic search (FAISS) that also tries to pick *diverse* documents to avoid repetition.",
+          "role": "diversification",
+          "strengths": [
+            "Good for 'brainstorming' or 'exploratory' queries (e.g., 'What are all the things they discussed?')",
+            "Avoids 10 documents all saying the same thing."
+          ],
+          "limitations": [
+            "May intentionally skip a relevant document if it's too similar to one already selected."
+          ]
+        }
+      },
+      "strategy_guides": {
+        "query_intents": {
+          "temporal_event_queries": {
+            "description": "Query asks 'When' something happened.",
+            "examples": ["When did Caroline go to the LGBTQ support group?"],
+            "characteristics": ["specific date/time", "event"],
+            "best_retrievers": ["ensemble", "bm25"]
+          },
+          "speaker_specific_queries": {
+            "description": "Query asks what a specific person said or did.",
+            "examples": ["What did Caroline research?", "What did Melanie say about..."],
+            "characteristics": ["speaker name", "metadata filter"],
+            "best_retrievers": ["self_query", "ensemble"]
+          },
+          "identity_relationships": {
+            "description": "Query asks 'Who' someone is or their relationship.",
+            "examples": ["What is Caroline's identity?"],
+            "characteristics": ["abstract concept", "personal detail"],
+            "best_retrievers": ["multiquery", "faiss"]
+          },
+          "conceptual_questions": {
+            "description": "Query asks for an opinion, summary, or inference.",
+            "examples": ["What fields would Caroline be likely to pursue?"],
+            "characteristics": ["requires inference", "open-ended"],
+            "best_retrievers": ["faiss", "multiquery", "parent_document"]
+          }
+        }
+      }
+    }
+  }
+  
+  
