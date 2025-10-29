@@ -8,122 +8,390 @@
           "temporal_events (When did X happen?)",
           "speaker_specific (What did Caroline say?)",
           "identity_relationships (Who is X?)",
-          "event_details (What happened at X?)"
+          "event_details (What happened at X?)",
+          "sequence_ordering (What happened before/after X?)"
+        ],
+        "characteristics": [
+          "Multi-session conversations with timestamps",
+          "Speaker metadata (Caroline, Melanie, etc.)",
+          "Personal events and activities",
+          "Temporal information is critical",
+          "Conversational context needed"
         ]
       },
       "retrievers": {
         "bm25": {
-          "description": "Keyword-based (Okapi BM25) search. Ranks by term frequency and inverse document frequency. Best for exact name/term matches.",
+          "description": "Keyword-based (Okapi BM25) search. Ranks by term frequency and inverse document frequency. Best for exact name/term matches in Locomo conversations.",
           "role": "lexical_search",
           "strengths": [
             "Perfect for finding exact names (Caroline, Melanie, specific places)",
-            "Excellent when query contains unique keywords (LGBTQ, medication names)"
+            "Excellent when query contains unique keywords (LGBTQ, medication names, specific activities)",
+            "Fast and computationally cheap",
+            "Works well for 'What did [person] say about [topic]?' queries"
           ],
-          "limitations": [
-            "WARNING: Fails if the exact keywords are not present.",
-            "DO NOT USE for conceptual questions, even if they contain a keyword (e.g., a query about 'research' may not be answered by a doc that says 'looking into')."
-          ]
+          "weaknesses": [
+            "Misses paraphrased or synonymous content",
+            "Cannot understand temporal relationships ('before', 'after', 'recently')",
+            "Doesn't capture conversational context"
+          ],
+          "primary_use_cases": [
+            "speaker_specific_queries",
+            "named_entity_lookup",
+            "activity_keyword_search"
+          ],
+          "llm_dependency": false,
+          "example_query": "What did Caroline say about LGBTQ support group?",
+          "locomo_success": "Finds exact mentions of 'LGBTQ', 'Caroline', specific medication names",
+          "locomo_failure": "Misses 'When did she go?' (no temporal understanding)"
         },
         "faiss": {
-          "description": "Vector-based semantic search (FAISS). Finds conceptually similar documents, even without keyword overlap.",
+          "description": "Dense semantic vector search using embeddings. Understands meaning and context. Best for natural language questions about events in Locomo.",
           "role": "semantic_search",
           "strengths": [
-            "Best for conceptual or open-ended questions (e.g., 'What fields... pursue?')",
-            "Understands intent and synonyms (e.g., 'sad' ≈ 'depressed')."
+            "Understands conversational intent ('What happened when...', 'Why did...', 'How did...')",
+            "Captures semantic relationships between events",
+            "Handles paraphrased questions well",
+            "Good for 'What fields would X pursue?' type conceptual queries"
           ],
-          "limitations": [
-            "May fail on abstract concepts (e.g., 'identity') if the embedding model can't connect them.",
-            "Can be 'distracted' by semantically similar but irrelevant documents."
-          ]
+          "weaknesses": [
+            "May miss exact names if semantically distant",
+            "Embedding space may not capture rare proper nouns well",
+            "Doesn't explicitly filter by temporal order"
+          ],
+          "primary_use_cases": [
+            "conceptual_questions",
+            "event_understanding",
+            "relationship_inference",
+            "general_conversational_queries"
+          ],
+          "llm_dependency": false,
+          "example_query": "What fields would Caroline be likely to pursue?",
+          "locomo_success": "Finds conceptually related utterances about education, interests, career aspirations",
+          "locomo_failure": "May retrieve wrong Caroline if multiple speakers with same name"
         },
         "ensemble": {
-          "description": "Hybrid search. Combines keyword (BM25) and semantic (FAISS) results. A strong, reliable default.",
-          "role": "hybrid_search",
+          "description": "Hybrid fusion of FAISS (semantic) + BM25 (keyword) using Reciprocal Rank Fusion. Best general-purpose retriever for Locomo.",
+          "role": "hybrid_fusion",
           "strengths": [
-            "Best of both worlds: catches exact keywords AND understands concepts.",
-            "Excellent safe default when a query is mixed or unclear."
+            "Combines exact name matching (BM25) with conceptual understanding (FAISS)",
+            "Most robust for mixed queries like 'When did Caroline paint a sunrise?'",
+            "Balances precision and recall",
+            "Works well for most Locomo query types"
           ],
-          "limitations": [
-            "Slightly slower as it runs two retrievers."
-          ]
-        },
-        "self_query": {
-          "description": "An 'intelligent' retriever that uses an LLM to extract metadata filters from the query *before* searching.",
-          "role": "metadata_aware_search",
-          "strengths": [
-            "ESSENTIAL for speaker-specific questions (e.g., 'What did *Caroline* say?').",
-            "Translates natural language ('yesterday', 'last week') into date filters.",
-            "Filters by speaker, date, or session."
+          "weaknesses": [
+            "Higher computational cost (runs two retrievers)",
+            "May still miss temporal ordering without explicit metadata filtering"
           ],
-          "limitations": [
-            "Requires an extra LLM call (slower).",
-            "Requires 'langchain-classic' package."
-          ]
-        },
-        "multiquery": {
-          "description": "A 'query expansion' retriever. Uses an LLM to rewrite a single query into multiple variations, increasing the chance of a match.",
-          "role": "query_expansion",
-          "strengths": [
-            "Fixes 'Weak Retriever' failures.",
-            "Excellent for ambiguous or abstract queries (e.g., 'What is Caroline's identity?' might become 'Who is Caroline?', 'Caroline's personal details', 'Caroline gender identity')."
+          "primary_use_cases": [
+            "temporal_event_queries",
+            "mixed_keyword_semantic",
+            "default_general_purpose"
           ],
-          "limitations": [
-            "Requires an extra LLM call (slower).",
-            "Can sometimes add noise if variations are poor."
-          ]
-        },
-        "parent_document": {
-          "description": "Context-aware retriever. Finds small, relevant chunks and then retrieves the full session document they belong to.",
-          "role": "hierarchical_search",
-          "strengths": [
-            "Best for broad, summary-style questions (e.g., 'What was the main topic of the meeting?')",
-            "Provides full context to the LLM."
-          ],
-          "limitations": [
-            "Returns very large documents."
-          ]
+          "llm_dependency": false,
+          "example_query": "When did Melanie paint a sunrise?",
+          "locomo_success": "Finds 'Melanie' (keyword) + 'paint' + 'sunrise' (semantic) combination",
+          "locomo_failure": "May not prioritize most recent event if multiple matches"
         },
         "mmr": {
-          "description": "Maximal Marginal Relevance (MMR). A semantic search (FAISS) that also tries to pick *diverse* documents to avoid repetition.",
+          "description": "Maximal Marginal Relevance - diversifies results to avoid redundancy. Good for exploring different conversation sessions in Locomo.",
           "role": "diversification",
           "strengths": [
-            "Good for 'brainstorming' or 'exploratory' queries (e.g., 'What are all the things they discussed?')",
-            "Avoids 10 documents all saying the same thing."
+            "Returns diverse utterances from different sessions/timestamps",
+            "Avoids repetitive similar utterances",
+            "Good for 'What did X discuss?' broad queries"
           ],
-          "limitations": [
-            "May intentionally skip a relevant document if it's too similar to one already selected."
-          ]
+          "weaknesses": [
+            "May exclude highly relevant duplicate information",
+            "Not ideal for precise temporal or factoid queries"
+          ],
+          "primary_use_cases": [
+            "exploratory_queries",
+            "broad_topic_discovery",
+            "multi_session_coverage"
+          ],
+          "llm_dependency": false,
+          "example_query": "What topics did Caroline discuss?",
+          "locomo_success": "Returns utterances from different sessions covering various topics",
+          "locomo_failure": "May miss the exact answer if it's similar to another high-ranked result"
+        },
+        "parent_document": {
+          "description": "Retrieves entire session context for matched utterances. Best when full conversation context is needed for Locomo answers.",
+          "role": "context_expansion",
+          "strengths": [
+            "Provides full conversation session around the answer",
+            "Solves 'lost context' problem in fragmented utterances",
+            "Excellent for 'What was discussed in the session about X?' queries"
+          ],
+          "weaknesses": [
+            "Returns large text blocks (entire sessions)",
+            "Overkill for simple factoid queries",
+            "Slower due to larger document processing"
+          ],
+          "primary_use_cases": [
+            "context_heavy_queries",
+            "conversation_flow_understanding",
+            "multi_turn_dialogue_retrieval"
+          ],
+          "llm_dependency": false,
+          "example_query": "What was the conversation about when Caroline mentioned her identity?",
+          "locomo_success": "Returns entire session providing full context around identity discussion",
+          "locomo_failure": "Too much text for 'When did X happen?' simple queries"
+        },
+        "self_query": {
+          "description": "LLM parses query to extract metadata filters (speaker, date, session). Best for explicit metadata filtering in Locomo.",
+          "role": "metadata_filtering",
+          "strengths": [
+            "Automatically filters by speaker ('Caroline', 'Melanie')",
+            "Can filter by temporal metadata if dates mentioned",
+            "Natural language metadata filtering ('show me Caroline's messages from May')"
+          ],
+          "weaknesses": [
+            "Requires LLM (adds latency and cost)",
+            "Depends on LLM correctly parsing metadata intent",
+            "May misinterpret ambiguous metadata references"
+          ],
+          "primary_use_cases": [
+            "speaker_specific_queries",
+            "temporal_filtering",
+            "session_specific_retrieval"
+          ],
+          "llm_dependency": true,
+          "example_query": "Show me what Caroline said in May 2023",
+          "locomo_success": "Filters to speaker='Caroline' AND date='May 2023'",
+          "locomo_failure": "If LLM misparses 'Caroline' as topic instead of speaker filter"
+        },
+        "multiquery": {
+          "description": "LLM expands query into multiple variations. Good for ambiguous or short Locomo queries.",
+          "role": "query_expansion",
+          "strengths": [
+            "Handles short queries like 'Caroline's research'",
+            "Generates multiple perspectives on ambiguous questions",
+            "Increases recall for poorly worded queries"
+          ],
+          "weaknesses": [
+            "LLM dependency (latency, cost)",
+            "May generate irrelevant query variants",
+            "Can introduce noise if expansion is too broad"
+          ],
+          "primary_use_cases": [
+            "ambiguous_queries",
+            "short_keyword_queries",
+            "underspecified_questions"
+          ],
+          "llm_dependency": true,
+          "example_query": "Caroline's education",
+          "locomo_success": "Expands to 'What did Caroline study?', 'Caroline's educational background', 'Fields Caroline pursued'",
+          "locomo_failure": "May expand too broadly and retrieve unrelated utterances"
+        },
+        "contextual_compression": {
+          "description": "LLM extracts only relevant sentences from retrieved documents. Good for filtering verbose Locomo conversations.",
+          "role": "context_filtering",
+          "strengths": [
+            "Removes conversational fluff and irrelevant parts",
+            "Returns precise answer-containing sentences",
+            "Reduces context size for downstream LLM processing"
+          ],
+          "weaknesses": [
+            "High latency (LLM must process each document)",
+            "May accidentally remove useful surrounding context",
+            "Expensive for large retrieval sets"
+          ],
+          "primary_use_cases": [
+            "precise_factoid_extraction",
+            "verbose_conversation_filtering",
+            "answer_focused_retrieval"
+          ],
+          "llm_dependency": true,
+          "example_query": "What medication did Caroline start?",
+          "locomo_success": "From long conversation, extracts only: 'Caroline started taking metformin'",
+          "locomo_failure": "Removes context like 'after doctor visit' which might be important"
+        },
+        "tfidf": {
+          "description": "Traditional TF-IDF information retrieval. Similar to BM25 but simpler scoring.",
+          "role": "lexical_search",
+          "strengths": [
+            "Fast keyword matching",
+            "Good for exact term lookups",
+            "Works well with unique terms in Locomo"
+          ],
+          "weaknesses": [
+            "Less sophisticated than BM25 for Locomo use cases",
+            "No semantic understanding",
+            "Generally outperformed by BM25 or ensemble"
+          ],
+          "primary_use_cases": [
+            "simple_keyword_lookup",
+            "baseline_comparison"
+          ],
+          "llm_dependency": false,
+          "example_query": "Find 'sunrise painting'",
+          "locomo_success": "Finds exact matches of 'sunrise' and 'painting'",
+          "locomo_failure": "Same weaknesses as BM25 but less effective"
+        },
+        "svm": {
+          "description": "Support Vector Machine based ranking using embeddings. Machine learning approach for Locomo retrieval.",
+          "role": "ml_based_ranking",
+          "strengths": [
+            "Learns optimal decision boundaries for relevance",
+            "Can capture complex patterns in Locomo conversations",
+            "Uses embeddings like FAISS but with ML ranking"
+          ],
+          "weaknesses": [
+            "Requires training data",
+            "More complex than semantic search",
+            "Similar performance to FAISS for most cases"
+          ],
+          "primary_use_cases": [
+            "ml_experiments",
+            "alternative_semantic_search"
+          ],
+          "llm_dependency": false,
+          "example_query": "Various Locomo queries",
+          "locomo_success": "May learn Locomo-specific patterns if trained properly",
+          "locomo_failure": "Without fine-tuning, similar to FAISS"
+        },
+        "time_weighted": {
+          "description": "Prioritizes recent documents using temporal decay. Good for Locomo 'recent events' queries.",
+          "role": "temporal_recency",
+          "strengths": [
+            "Naturally prioritizes recent conversations in Locomo",
+            "Good for 'What did X do recently?' queries",
+            "Considers session timestamps"
+          ],
+          "weaknesses": [
+            "Current implementation is basic FAISS (needs upgrade to full temporal scoring)",
+            "May deprioritize older but more relevant information",
+            "Temporal decay function needs tuning for Locomo"
+          ],
+          "primary_use_cases": [
+            "recent_event_queries",
+            "latest_information_retrieval"
+          ],
+          "llm_dependency": false,
+          "example_query": "What did Caroline do recently?",
+          "locomo_success": "Returns most recent sessions first",
+          "locomo_failure": "May miss highly relevant older events"
+        },
+        "multivector": {
+          "description": "Multiple vector representations per document. Advanced technique for Locomo.",
+          "role": "multi_representation",
+          "strengths": [
+            "Can represent different aspects of each utterance",
+            "Potentially better coverage than single vector",
+            "Good for multi-faceted Locomo queries"
+          ],
+          "weaknesses": [
+            "Complex setup and tuning",
+            "Requires LLM for summaries/variations",
+            "Higher storage and computational cost"
+          ],
+          "primary_use_cases": [
+            "advanced_experiments",
+            "multi_aspect_retrieval"
+          ],
+          "llm_dependency": true,
+          "example_query": "Complex multi-aspect Locomo queries",
+          "locomo_success": "May capture nuances missed by single-vector approaches",
+          "locomo_failure": "Complexity may not justify improvement for simple Locomo queries"
+        },
+        "long_context_reorder": {
+          "description": "Reorders retrieved documents for optimal LLM processing. Useful for Locomo RAG pipeline.",
+          "role": "reordering",
+          "strengths": [
+            "Puts most relevant context at beginning/end (LLM attention sweet spots)",
+            "Reduces 'lost in the middle' problem for Locomo conversations",
+            "Improves RAG answer quality"
+          ],
+          "weaknesses": [
+            "Post-processing step, not primary retrieval",
+            "Assumes LLM attention patterns",
+            "Minimal impact for small context windows"
+          ],
+          "primary_use_cases": [
+            "rag_optimization",
+            "long_context_scenarios"
+          ],
+          "llm_dependency": false,
+          "example_query": "Any Locomo query with RAG",
+          "locomo_success": "Improves answer generation from retrieved Locomo utterances",
+          "locomo_failure": "Doesn't fix poor initial retrieval"
         }
       },
-      "strategy_guides": {
-        "query_intents": {
-          "temporal_event_queries": {
-            "description": "Query asks 'When' something happened.",
-            "examples": ["When did Caroline go to the LGBTQ support group?"],
-            "characteristics": ["specific date/time", "event"],
-            "best_retrievers": ["ensemble", "bm25"]
-          },
-          "speaker_specific_queries": {
-            "description": "Query asks what a specific person said or did.",
-            "examples": ["What did Caroline research?", "What did Melanie say about..."],
-            "characteristics": ["speaker name", "metadata filter"],
-            "best_retrievers": ["self_query", "ensemble"]
-          },
-          "identity_relationships": {
-            "description": "Query asks 'Who' someone is or their relationship.",
-            "examples": ["What is Caroline's identity?"],
-            "characteristics": ["abstract concept", "personal detail"],
-            "best_retrievers": ["multiquery", "faiss"]
-          },
-          "conceptual_questions": {
-            "description": "Query asks for an opinion, summary, or inference.",
-            "examples": ["What fields would Caroline be likely to pursue?"],
-            "characteristics": ["requires inference", "open-ended"],
-            "best_retrievers": ["faiss", "multiquery", "parent_document"]
-          }
+      "Intent_to_Retriever_Mapping": {
+        "temporal_event_queries": ["ensemble", "bm25", "time_weighted"],
+        "speaker_specific_queries": ["self_query", "bm25", "ensemble"],
+        "conceptual_questions": ["faiss", "multiquery", "ensemble"],
+        "identity_relationships": ["faiss", "ensemble", "parent_document"],
+        "event_details": ["ensemble", "faiss", "contextual_compression"],
+        "exploratory_queries": ["mmr", "multiquery", "ensemble"],
+        "named_entity_lookup": ["bm25", "ensemble"],
+        "activity_keyword_search": ["bm25", "tfidf", "ensemble"],
+        "context_heavy_queries": ["parent_document", "long_context_reorder"],
+        "ambiguous_queries": ["multiquery", "ensemble"],
+        "precise_factoid_extraction": ["contextual_compression", "ensemble"],
+        "recent_event_queries": ["time_weighted", "ensemble"],
+        "default_general_purpose": ["ensemble", "faiss", "bm25"]
+      },
+      "Locomo_Query_Analysis_Guide": {
+        "when_questions": {
+          "pattern": "When did [person] [action]?",
+          "characteristics": ["temporal focus", "requires date/time", "factoid lookup"],
+          "best_retrievers": ["ensemble", "bm25"],
+          "reasoning": "Ensemble combines keyword matching (for person/action) with semantic understanding. BM25 good for exact phrase matching."
+        },
+        "what_questions": {
+          "pattern": "What did [person] [say/do]?",
+          "characteristics": ["speaker-specific", "action/content focus"],
+          "best_retrievers": ["self_query", "ensemble", "bm25"],
+          "reasoning": "Self-query can filter by speaker metadata. Ensemble provides robust hybrid search. BM25 for exact name matching."
+        },
+        "who_questions": {
+          "pattern": "Who is/was [person]? What is [person's] identity?",
+          "characteristics": ["identity query", "relationship understanding", "conceptual"],
+          "best_retrievers": ["faiss", "ensemble", "parent_document"],
+          "reasoning": "FAISS understands identity concepts. Parent document provides full context. Ensemble for balanced approach."
+        },
+        "why_how_questions": {
+          "pattern": "Why did [person]...? How did [event] happen?",
+          "characteristics": ["causal reasoning", "deep context needed", "explanation required"],
+          "best_retrievers": ["faiss", "parent_document", "contextual_compression"],
+          "reasoning": "FAISS captures semantic relationships. Parent document gives full context. Compression filters to relevant explanations."
+        },
+        "what_fields_topics": {
+          "pattern": "What fields/topics would [person] pursue?",
+          "characteristics": ["conceptual inference", "interest/career related", "requires understanding context"],
+          "best_retrievers": ["faiss", "ensemble", "multiquery"],
+          "reasoning": "FAISS best for conceptual queries. Multiquery expands to cover education, interests, career, aspirations."
+        },
+        "recent_latest": {
+          "pattern": "What did [person] do recently/lately?",
+          "characteristics": ["temporal recency", "prioritize recent events"],
+          "best_retrievers": ["time_weighted", "ensemble"],
+          "reasoning": "Time-weighted prioritizes recent sessions. Ensemble as fallback for semantic + keyword."
+        },
+        "broad_exploratory": {
+          "pattern": "What topics/activities did [person] discuss?",
+          "characteristics": ["exploratory", "needs diverse results", "multi-session coverage"],
+          "best_retrievers": ["mmr", "multiquery", "ensemble"],
+          "reasoning": "MMR provides diverse results across sessions. Multiquery expands scope. Ensemble for comprehensive coverage."
         }
+      },
+      "Orchestrator": {
+        "summary": "For Locomo dataset, the orchestrator should:\n1. Identify if query is temporal (when), speaker-specific (who said), conceptual (what fields), or exploratory\n2. Check for explicit names (Caroline, Melanie) - use BM25/ensemble\n3. Check for conceptual/inferential questions - use FAISS/multiquery\n4. Check for metadata filtering needs - use self_query\n5. Default to ensemble for mixed or unclear queries",
+        "selection_priority": [
+          "1. Detect query pattern (when/what/who/why/how)",
+          "2. Check for metadata filtering needs (speaker, date)",
+          "3. Assess if conceptual vs. factoid",
+          "4. Consider if temporal recency matters",
+          "5. Default to ensemble if uncertain"
+        ],
+        "locomo_specific_rules": [
+          "Temporal queries ('when') → ensemble or bm25",
+          "Speaker-specific ('Caroline said') → self_query or bm25",
+          "Conceptual ('likely to pursue') → faiss or multiquery",
+          "Identity questions → faiss or parent_document",
+          "Mixed/unclear → ensemble (safe default)"
+        ]
       }
     }
   }
-  
-  
