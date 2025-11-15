@@ -1,0 +1,5 @@
+# Local vector store artifacts
+vector_store/
+
+# Dataset file should stay local
+longmemeval_s_cleaned.json

@@ -1,0 +1,22 @@
+[
+  {
+    "question_id": "sample_q1",
+    "question_type": "multi-session",
+    "question": "When did Alex finalize the research proposal?",
+    "answer": "Alex finalized the proposal on February 10, 2024 during the planning session.",
+    "question_date": "2024-02-10T15:30:00Z",
+    "haystack_session_ids": ["s_01", "s_02"],
+    "haystack_dates": ["2024-02-09T10:00:00Z", "2024-02-10T09:00:00Z"],
+    "haystack_sessions": [
+      [
+        {"role": "user", "content": "Let's review the proposal timeline.", "has_answer": false},
+        {"role": "assistant", "content": "We are still missing the budget appendix.", "has_answer": false}
+      ],
+      [
+        {"role": "user", "content": "The appendix is done; we wrapped everything this morning.", "has_answer": true},
+        {"role": "assistant", "content": "Great, that finalizes the proposal on February 10th.", "has_answer": true}
+      ]
+    ],
+    "answer_session_ids": ["s_02"]
+  }
+]
