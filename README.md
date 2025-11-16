@@ -58,8 +58,8 @@ NLP-Project-Final/
 │   ├── longmem_analysis.csv
 │   └── *.png (visualizations)
 ├── dataloader.py                  # Data loading utilities
-├── orchestrator_approach.py       # Main evaluation for Locomo dataset
-├── orchestrator_longmem.py        # Main evaluation for LongMemEval dataset
+├── locomo_approach.py       # Main evaluation for Locomo dataset
+├── longmem_approach.py        # Main evaluation for LongMemEval dataset
 ├── analyze_locomo.py              # Generate CSV analysis for Locomo
 ├── analyze_longmem.py             # Generate CSV analysis for LongMemEval
 ├── visualize_locomo.py            # Generate visualizations for Locomo
