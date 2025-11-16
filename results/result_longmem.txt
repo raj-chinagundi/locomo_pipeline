@@ -1,0 +1,281 @@
+Loading data...
+Processing longmem data...
+Creating documents from sessions...
+Created 122407 documents
+Loading QA data (processing all questions)...
+Loaded 500 questions
+Creating collection_key to documents mapping...
+Created 500 collections
+Creating question metadata mapping...
+Loading embeddings model (this may take a moment)...
+Starting evaluation of 500 questions...
+Processing questions...
+
+Processing question 10/500 (docs: 241)...
+Progress: 10/500 questions processed
+
+Processing question 20/500 (docs: 250)...
+Progress: 20/500 questions processed
+
+Processing question 30/500 (docs: 265)...
+Progress: 30/500 questions processed
+
+Processing question 40/500 (docs: 246)...
+Progress: 40/500 questions processed
+
+Processing question 50/500 (docs: 253)...
+Progress: 50/500 questions processed
+Running Averages (after 50 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 1.0000          0.9705         
+TF-IDF               1.0000          0.9483         
+SVM                  0.9400          0.8839         
+FAISS                0.9400          0.8912         
+Time-Weighted        0.8400          0.8300         
+==================================================
+
+Processing question 60/500 (docs: 288)...
+Progress: 60/500 questions processed
+
+Processing question 70/500 (docs: 251)...
+Progress: 70/500 questions processed
+
+Processing question 80/500 (docs: 255)...
+Progress: 80/500 questions processed
+
+Processing question 90/500 (docs: 238)...
+Progress: 90/500 questions processed
+
+Processing question 100/500 (docs: 236)...
+Progress: 100/500 questions processed
+Running Averages (after 100 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8603          0.8444         
+TF-IDF               0.8465          0.8110         
+SVM                  0.8030          0.7619         
+FAISS                0.8565          0.8121         
+Time-Weighted        0.7642          0.7579         
+==================================================
+
+Processing question 110/500 (docs: 236)...
+Progress: 110/500 questions processed
+
+Processing question 120/500 (docs: 245)...
+Progress: 120/500 questions processed
+
+Processing question 130/500 (docs: 258)...
+Progress: 130/500 questions processed
+
+Processing question 140/500 (docs: 250)...
+Progress: 140/500 questions processed
+
+Processing question 150/500 (docs: 252)...
+Progress: 150/500 questions processed
+Running Averages (after 150 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.7761          0.7541         
+TF-IDF               0.7663          0.7329         
+SVM                  0.7686          0.7352         
+FAISS                0.8449          0.7994         
+Time-Weighted        0.7462          0.7333         
+==================================================
+
+Processing question 160/500 (docs: 260)...
+Progress: 160/500 questions processed
+
+Processing question 170/500 (docs: 260)...
+Progress: 170/500 questions processed
+
+Processing question 180/500 (docs: 233)...
+Progress: 180/500 questions processed
+
+Processing question 190/500 (docs: 243)...
+Progress: 190/500 questions processed
+
+Processing question 200/500 (docs: 233)...
+Progress: 200/500 questions processed
+Running Averages (after 200 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.7946          0.7632         
+TF-IDF               0.8022          0.7551         
+SVM                  0.7814          0.7494         
+FAISS                0.8487          0.8008         
+Time-Weighted        0.7547          0.7387         
+==================================================
+
+Processing question 210/500 (docs: 231)...
+Progress: 210/500 questions processed
+
+Processing question 220/500 (docs: 232)...
+Progress: 220/500 questions processed
+
+Processing question 230/500 (docs: 259)...
+Progress: 230/500 questions processed
+
+Processing question 240/500 (docs: 246)...
+Progress: 240/500 questions processed
+
+Processing question 250/500 (docs: 243)...
+Progress: 250/500 questions processed
+Running Averages (after 250 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8080          0.7748         
+TF-IDF               0.7975          0.7559         
+SVM                  0.7681          0.7419         
+FAISS                0.8489          0.8037         
+Time-Weighted        0.7531          0.7382         
+==================================================
+
+Processing question 260/500 (docs: 231)...
+Progress: 260/500 questions processed
+
+Processing question 270/500 (docs: 246)...
+Progress: 270/500 questions processed
+
+Processing question 280/500 (docs: 236)...
+Progress: 280/500 questions processed
+
+Processing question 290/500 (docs: 228)...
+Progress: 290/500 questions processed
+
+Processing question 300/500 (docs: 237)...
+Progress: 300/500 questions processed
+Running Averages (after 300 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.7952          0.7622         
+TF-IDF               0.7846          0.7431         
+SVM                  0.7436          0.7198         
+FAISS                0.8233          0.7806         
+Time-Weighted        0.7289          0.7164         
+==================================================
+
+Processing question 310/500 (docs: 232)...
+Progress: 310/500 questions processed
+
+Processing question 320/500 (docs: 243)...
+Progress: 320/500 questions processed
+
+Processing question 330/500 (docs: 265)...
+Progress: 330/500 questions processed
+
+Processing question 340/500 (docs: 264)...
+Progress: 340/500 questions processed
+
+Processing question 350/500 (docs: 227)...
+Progress: 350/500 questions processed
+Running Averages (after 350 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8048          0.7729         
+TF-IDF               0.7938          0.7532         
+SVM                  0.7429          0.7229         
+FAISS                0.8261          0.7839         
+Time-Weighted        0.7356          0.7231         
+==================================================
+
+Processing question 360/500 (docs: 216)...
+Progress: 360/500 questions processed
+
+Processing question 370/500 (docs: 197)...
+Progress: 370/500 questions processed
+
+Processing question 380/500 (docs: 246)...
+Progress: 380/500 questions processed
+
+Processing question 390/500 (docs: 241)...
+Progress: 390/500 questions processed
+
+Processing question 400/500 (docs: 251)...
+Progress: 400/500 questions processed
+Running Averages (after 400 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8175          0.7845         
+TF-IDF               0.8075          0.7637         
+SVM                  0.7496          0.7310         
+FAISS                0.8324          0.7888         
+Time-Weighted        0.7407          0.7293         
+==================================================
+
+Processing question 410/500 (docs: 235)...
+Progress: 410/500 questions processed
+
+Processing question 420/500 (docs: 239)...
+Progress: 420/500 questions processed
+
+Processing question 430/500 (docs: 259)...
+Progress: 430/500 questions processed
+
+Processing question 440/500 (docs: 236)...
+Progress: 440/500 questions processed
+
+Processing question 450/500 (docs: 226)...
+Progress: 450/500 questions processed
+Running Averages (after 450 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8356          0.7998         
+TF-IDF               0.8277          0.7828         
+SVM                  0.7652          0.7453         
+FAISS                0.8444          0.8012         
+Time-Weighted        0.7584          0.7451         
+==================================================
+
+Processing question 460/500 (docs: 253)...
+Progress: 460/500 questions processed
+
+Processing question 470/500 (docs: 236)...
+Progress: 470/500 questions processed
+
+Processing question 480/500 (docs: 269)...
+Progress: 480/500 questions processed
+
+Processing question 490/500 (docs: 256)...
+Progress: 490/500 questions processed
+
+Processing question 500/500 (docs: 268)...
+Progress: 500/500 questions processed
+Running Averages (after 500 questions):
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8360          0.7994         
+TF-IDF               0.8370          0.7965         
+SVM                  0.7807          0.7605         
+FAISS                0.8539          0.8125         
+Time-Weighted        0.7746          0.7611         
+==================================================
+
+Processing question 500/500... Complete!    
+
+==================================================
+FINAL RESULTS
+==================================================
+Total Questions Evaluated: 500
+==================================================
+Retriever            Recall@5        NDCG@5         
+==================================================
+BM25                 0.8360          0.7994         
+TF-IDF               0.8370          0.7965         
+SVM                  0.7807          0.7605         
+FAISS                0.8539          0.8125         
+Time-Weighted        0.7746          0.7611         
+==================================================
+
+Saving results to longmem_results.json...
+Results saved to longmem_results.json (500 questions)
