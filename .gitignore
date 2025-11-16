@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+data/longmemeval_s_cleaned.json
+*.json
+results/*.json
+results/*.png
+results/*.csv
+archive/
